@@ -1,4 +1,4 @@
-function testing_output = minSVM(x,y,testing,C,threshold_rate,eps)
+function output = minSVM(x,y,testing,C,threshold_rate,eps)
 
 %check rate of z convergence
 objective_min_value_rate = 9999999999; %update this over time
@@ -43,6 +43,6 @@ while (objective_min_value_rate > threshold_rate)
     new_objective_min_value=0.5*transpose(theta_tilda)*diagonal*theta_tilda+C*sumMin;
     objective_min_value_rate=old_objective_min_value-new_objective_min_value / 1;
     old_objective_min_value=new_objective_min_value;
-    intermediate_classification_testing=testing*theta_tilda; %LOOK if you want to see how classification is working
+    output=testing*theta_tilda; %LOOK if you want to see how classification is working
 
 end
