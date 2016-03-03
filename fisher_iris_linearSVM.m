@@ -1,4 +1,3 @@
-%Least squares on Fisher Iris data set
 %http://en.wikipedia.org/wiki/Iris_flower_data_set)
 %Can get from matlab with 'load fisheriris.mat'
 
